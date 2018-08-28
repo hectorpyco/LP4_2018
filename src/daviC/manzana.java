@@ -7,7 +7,7 @@ package daviC;
 
 /**
  *
- * @author david Coronel
+ * @author david
  */
 public class manzana extends frutas {
 
