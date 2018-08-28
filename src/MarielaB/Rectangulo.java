@@ -18,21 +18,17 @@ public class Rectangulo extends figura { //derivada de figura
         base=b;
         altura=a;
     }
-    public void setarea(){
-        this.area=base*altura;
-       
-    }
+  
     public void setperimetro(){
           this.perimetro=(base*2)+(altura*2);
     }
-  public void dibujar (){
-      super.dibujar();
-      System.out.println("Dibujo:");
-      for(int i=0;i<altura;i++){
-          for(int j=0; j<base; j++)
-              System.out.print("*");
-          System.out.println();
-      }
+
+	@Override
+	public void setarea() {
+		// TODO Auto-generated method stub
+		this.area= base*altura;
+	}
+ 
   }
     
-}
+

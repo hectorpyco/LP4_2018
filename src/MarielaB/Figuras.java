@@ -23,10 +23,10 @@ public class Figuras {
         Rectangulo objrect= new Rectangulo (wbas, walt);
         objcuad.setarea();
         objcuad.setperimetro();
-        objcuad.dibujar();
+        objcuad.dibujar(wlado, wlado);
         objrect.setarea();
         objrect.setperimetro();
-        objrect.dibujar();
+        objrect.dibujar(walt,wbas);
         
       
     }

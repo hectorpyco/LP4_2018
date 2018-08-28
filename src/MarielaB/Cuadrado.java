@@ -18,7 +18,7 @@ public class Cuadrado extends figura { // clase hija
     public void setperimetro(){
         this.perimetro=lado*4;
     }
-  public void dibujar (){
+  /*public void dibujar (){
       super.dibujar();
       System.out.println("Dibujo:");
       for(int i=0;i<lado;i++){
@@ -27,6 +27,6 @@ public class Cuadrado extends figura { // clase hija
           System.out.println();
       }
   }
-   
+   */
     
 }
