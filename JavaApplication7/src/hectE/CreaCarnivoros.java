@@ -9,6 +9,8 @@ public class CreaCarnivoros {
 		Carnivoros miGato = new Gato("michi",2);
 		
 		Canidos miPerro= new Perro("rompe",5);
+                //nuevos carnivoros
+                Felinos miTigre = new Felinos();
 		
 		
 	}
