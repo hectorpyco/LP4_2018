@@ -1,13 +1,18 @@
 select distinct cones.INSTITUCIÓN, cones.[CARRERA O PROGRAMA], cones.[SEDE O FILIAL],  mec.nombre_institucion, mec.denominacion_carrera, mec.CONES, mec.departamento
-from CONES, MEC
+from CONES
+join MEC
+on mec.denominacion_carrera like '%' + cones.[CARRERA O PROGRAMA] + '%'
+
 WHERE
 CONES.INSTITUCIÓN = mec.nombre_institucion
 and 
 
 INSTITUCIÓN like '%universidad%'
+/*
 and
 [CARRERA O PROGRAMA] like '%inform%'
 and denominacion_carrera like '%inform%'
+*/
 order by nombre_institucion
 
-/* solo para test */
+
