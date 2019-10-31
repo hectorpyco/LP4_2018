@@ -8,11 +8,9 @@ CONES.INSTITUCIÓN = mec.nombre_institucion
 and 
 
 INSTITUCIÓN like '%universidad%'
-/*
+
 and
-[CARRERA O PROGRAMA] like '%inform%'
-and denominacion_carrera like '%inform%'
-*/
+cones.[SEDE O FILIAL] like '%' + mec.distrito + '%'
 order by nombre_institucion
 
 
