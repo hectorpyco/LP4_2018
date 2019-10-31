@@ -10,4 +10,4 @@ and
 and denominacion_carrera like '%inform%'
 order by nombre_institucion
 
-
+/* solo para test */
