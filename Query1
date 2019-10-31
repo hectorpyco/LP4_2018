@@ -1,4 +1,5 @@
-select distinct cones.INSTITUCIÓN, cones.[CARRERA O PROGRAMA], cones.[SEDE O FILIAL],  mec.nombre_institucion, mec.denominacion_carrera, mec.CONES, mec.departamento
+select  cones.INSTITUCIÓN, cones.[CARRERA O PROGRAMA], cones.[SEDE O FILIAL], cones.[DOCUMENTO RESPALDATORIO],
+  mec.nombre_institucion, mec.denominacion_carrera, mec.CONES, mec.departamento
 from CONES
 join MEC
 on mec.denominacion_carrera like '%' + cones.[CARRERA O PROGRAMA] + '%'
