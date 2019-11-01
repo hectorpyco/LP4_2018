@@ -1,12 +1,12 @@
 use Carreras
 
 select  cones.INSTITUCIÓN, mec.nombre_institucion,
- cones.[CARRERA O PROGRAMA], mec.denominacion_carrera, 
+ cones.denominacion_carrera, mec.denominacion_carrera, 
  cones.[SEDE O FILIAL], mec.distrito,
   mec.CONES, cones.[DOCUMENTO RESPALDATORIO]
 from CONES
  join MEC
- on mec.denominacion_carrera like '%' + cones.[CARRERA O PROGRAMA] + '%'
+ on mec.denominacion_carrera like '%' + cones.denominacion_carrera + '%'
 WHERE
 CONES.INSTITUCIÓN =mec.nombre_institucion
 
