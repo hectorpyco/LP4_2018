@@ -1,12 +1,15 @@
-select  cones.INSTITUCIÓN, cones.[CARRERA O PROGRAMA], cones.[SEDE O FILIAL], cones.[DOCUMENTO RESPALDATORIO],
-  mec.nombre_institucion, mec.denominacion_carrera, mec.CONES, mec.departamento
+use Carreras
+
+select  cones.INSTITUCIÓN, mec.nombre_institucion,
+ cones.[CARRERA O PROGRAMA], mec.denominacion_carrera, 
+ cones.[SEDE O FILIAL], mec.distrito,
+  mec.CONES, cones.[DOCUMENTO RESPALDATORIO]
 from CONES
  join MEC
  on mec.denominacion_carrera like '%' + cones.[CARRERA O PROGRAMA] + '%'
 WHERE
-CONES.INSTITUCIÓN like '%' + mec.nombre_institucion + '%'
-and 
-cones.INSTITUCIÓN like '%universidad%'
+CONES.INSTITUCIÓN =mec.nombre_institucion
+
 and
 cones.[SEDE O FILIAL] like '%' + mec.distrito + '%'
 order by nombre_institucion
