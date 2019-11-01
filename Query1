@@ -6,12 +6,14 @@ select  cones.INSTITUCIÓN, mec.nombre_institucion,
   mec.CONES, cones.[DOCUMENTO RESPALDATORIO]
 from CONES
  join MEC
- on mec.denominacion_carrera like '%' + cones.denominacion_carrera + '%'
+ on CONES.INSTITUCIÓN =mec.nombre_institucion
 WHERE
-CONES.INSTITUCIÓN =mec.nombre_institucion
-
+(mec.denominacion_carrera like '%' + cones.denominacion_carrera + '%'
+or 
+mec.denominacion_carrera like '%' + cones.[CARRERA O PROGRAMA] + '%')
 and
 cones.[SEDE O FILIAL] like '%' + mec.distrito + '%'
+and mec.cones is null
 order by nombre_institucion
 
 
