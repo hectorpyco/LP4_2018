@@ -1,0 +1,13 @@
+BEGIN TRANSACTION
+UPDATE MEC
+SET MEC.CONES=CONES.[DOCUMENTO RESPALDATORIO]
+from MEC
+ join CONES
+ on CONES.INSTITUCIÓN =mec.nombre_institucion
+WHERE
+(mec.denominacion_carrera like '%' + cones.denominacion_carrera + '%'
+or 
+mec.denominacion_carrera like '%' + cones.[CARRERA O PROGRAMA] + '%')
+and
+cones.[SEDE O FILIAL] like '%' + mec.distrito + '%'
+and mec.cones is null
