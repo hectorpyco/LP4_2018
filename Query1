@@ -13,17 +13,7 @@ or
 mec.denominacion_carrera like '%' + cones.[CARRERA O PROGRAMA] + '%'
 OR
 mec.denominacion_carrera like '%' + cones.denominacion_carrera + '%'
-or 
-cones.denominacion_carrera like '%' + mec.denominacion_carrera + '%'
-or 
-cones.[CARRERA O PROGRAMA] like '%' + mec.denominacion_carrera + '%')
+)
 and
-(cones.[SEDE O FILIAL] = mec.distrito 
-OR 
-cones.[SEDE O FILIAL] like '%' + mec.distrito  + '%'
-OR
-mec.distrito like '%' + cones.[SEDE O FILIAL]+ '%')
-
+(cones.[SEDE O FILIAL] = mec.distrito )
 order by nombre_institucion
-
-
