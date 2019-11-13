@@ -1,0 +1,22 @@
+use Carreras
+
+select  DISTINCT aneaes.Universidad, mec.nombre_institucion,
+ aneaes.Carrera, mec.denominacion_carrera, 
+ aneaes.sede, mec.distrito,
+  aneaes.[Fecha Finalización], MEC.Resol_ANEAES, MEC.Resol_CONES, mec.modalidad_estudio
+from ANEAES
+ join MEC
+ on aneaes.Universidad =mec.nombre_institucion
+WHERE
+(mec.denominacion_carrera = aneaes.Carrera 
+
+)
+and
+(aneaes.Sede = mec.distrito 
+)
+and
+mec.Resol_ANEAES='NULL'
+and
+mec.modalidad_estudio='Presencial'
+
+order by nombre_institucion
